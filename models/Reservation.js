@@ -1,9 +1,6 @@
-// api/models/Reservation.js
-
 import mongoose from "mongoose";
 
-const ReservationSchema = new mongoose.Schema(
-  {
+const ReservationSchema = new mongoose.Schema({
     date: {
         type: Date,
         required: true
@@ -20,14 +17,7 @@ const ReservationSchema = new mongoose.Schema(
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
     },
-    rest: { 
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Restaurant'
-    }
-  },
-  { timestamps: true }
-);
-
-
-
+  }, { timestamps: true });
+  
+  
 export default mongoose.model("Reservation", ReservationSchema);
