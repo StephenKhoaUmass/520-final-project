@@ -44,9 +44,10 @@ app.use(cors({
 
 app.use(morgan("common"));
 
-app.use("/api/admin", adminRoute);
-app.use("/api/users", userRoute);
-app.use("/api/reservations", reservRoute);
+// Not sure about this part
+app.use("/", adminRoute); 
+app.use("/", userRoute);  
+app.use("/", reservRoute); 
 
 app.listen(PORT, () => {
     console.log("Listening on port 7700");
