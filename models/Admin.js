@@ -1,30 +1,19 @@
-// api/models/Admin.js
-
 import mongoose from "mongoose";
 
-const AdminSchema = new mongoose.Schema(
-  {
-    username: {
-      type: String,
-      require: true,
-    },
-    password: {
-      type: String,
-      required: true,
-      min: 6,
-    },
-    isAdmin: {
-      type: Boolean,
-      default: true,
-    },
-    rest: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Restaurant'
-    }
+const AdminSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
   },
-  { timestamps: true }
-);
+  password: {
+    type: String,
+    required: true,
+    min: 6,
+  },
+  isAdmin: {
+    type: Boolean,
+    default: true,
+  },
+}, { timestamps: true });
 
-
-
-export default mongoose.model("Admin", AdminSchema);
+export default mongoose.model("Admin", adminSchema);
