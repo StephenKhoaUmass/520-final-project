@@ -12,6 +12,7 @@ Khoa’s Contributions:
   + Create tests for the backend part in the tests folder using tools like Mocha and Chai
 
 - addFrontend branch: create some tests for the frontend part in the tests folder using @testing-library/react and @testing-library/jest-dom.
+- Move all these changes to the main branch
 
 
 ## Aayush Patel
