@@ -4,25 +4,12 @@ import "../styles/confirmation.scss";
 import axios from "axios";
 import { useContext, useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { AuthContext } from "../authContext";
 
-function Confirmation({type}) {
-  const [credentials, setCredentials] = useState({
-    username: undefined,
-    password: undefined,
-  });
-
-  const urls = {
-    "admin": "http://localhost:5050/api/admin/login",
-    "user": "http://localhost:5050/api/users/login"
-  }
 
   const landings = {
     "type": "/reservations",
   }
 
-  const { dispatch } = useContext(AuthContext);
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
