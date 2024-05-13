@@ -1,13 +1,8 @@
 import mongoose from "mongoose";
 
-const NewReservationSchema = new mongoose.Schema(
-  {
+const ReservationSchema = new mongoose.Schema({
     date: {
         type: Date,
-        required: true
-    },
-    confirmationId: {
-        type: String,
         required: true
     },
     slot: {
@@ -18,12 +13,11 @@ const NewReservationSchema = new mongoose.Schema(
         type: Number,
         required: true
     },
-    email: { 
-        type: String,
-    }
-  }
-);
-
-
-
-export default mongoose.model("NewReservation", NewReservationSchema);
+    author: { 
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User'
+    },
+  }, { timestamps: true });
+  
+  
+export default mongoose.model("NewReservation", ReservationSchema);
