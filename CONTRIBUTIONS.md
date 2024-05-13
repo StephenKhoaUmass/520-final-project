@@ -19,3 +19,4 @@ Aayush worked on the README file for the project. In addition, he contributed to
 He did the necessary research to see how the MERN stack could properly be implemented in the project, and also looked into seeing whether all the APIs and configurations were working together correctly. He also helped with some of the testing and ensuring the testing suite was running in a proper way so that there all the bugs could be fixed in a convenient time manner. 
 
 ## Ananya Bijala
+Ananya reviewed the styling of the front end of the project to make sure that it is easy to understand. She also aided in the creation of tests for the front end of the project to make sure that the project, in particular the front end, is working appropriately. 
